@@ -1,14 +1,25 @@
+import React from 'react';
+import Counter from './Counter';
+import Container from './Container';
 import './App.css';
 
+import MyHeader from './MyHeader';
+
 function App() {
-  let name = '수진';
+  const counterProps = {
+    a: 1,
+    b: 2,
+    c: 3,
+    initialValue: 5,
+  };
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>안뇽 {name}</p>
-      </header>
-    </div>
+    <Container>
+      <div className='App'>
+        <MyHeader />
+        <Counter {...counterProps} />
+      </div>
+    </Container>
   );
 }
 
